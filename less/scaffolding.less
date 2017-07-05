@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+body > * {
+  outline: 2px solid red;
+}
+body > * > * {
+  outline: 2px dotted blue;
+  outline-offset: -2px;
+}
+body > * > * > * {
+  outline: 2px solid green;
+  outline-offset: -4px;
+}

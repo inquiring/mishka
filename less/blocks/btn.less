@@ -1,0 +1,122 @@
+.btn {
+    display: block;
+    padding-top: 14px;
+    padding-bottom: 17px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: @white;
+    border: 3px solid @white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-sizing: border-box;
+    // ---
+    &:hover {
+        color: @pink;
+        background-color: @white;
+    }
+    &:active {
+        color: fade(@pink, 30%);
+    }
+    // index
+    &--download {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    // photo
+    &--upload {
+        width: 100%;
+        color: @pink;
+        border-color: @pink;
+        background-color: @grey;
+    }
+    &--upload:hover {
+        color: @white;
+        background-color: @pink;
+    }
+    &--upload:active {
+        color: fade(@pink, 30%);
+    }
+    &--cancel {
+        width: 100%;
+        color: fade(@blue, 10%);
+        border-color: @grey;
+        border-color: fade(@blue, 10%);
+    }
+    &--cancel:hover {
+        color: fade(@blue, 30%);
+        background-color: @grey;
+        border-color: fade(@blue, 30%);
+    }
+    &--cancel:active {
+        color: fade(@white, 30%);
+        background-color: fade(@blue, 30%);
+    }
+    &--submit {
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 16px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: @white;
+        background-color: @green;
+        border: none;
+        border-radius: 5px;
+    }
+    &--submit:hover {
+        color: @white;
+        background-color: @dark-green;
+    }
+    &--submit:active {
+        color: fade(@white, 30%);
+    }
+    &--submit:disabled {
+        background-color: @dark-grey;
+    }
+    // forma
+    &--form {
+        width: 100%;
+        margin-bottom: 35px;
+        padding: 20px 45px 22px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 3px;
+        background-color: @green;
+    }
+    // popup
+    &--modal-content {
+        margin: 0 auto;
+        padding: 25px 67px 24px;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        background-color: @green;
+    }
+    @media @tablet-widths {
+        &--form {
+            width: 300px;
+            margin-bottom: 0;
+        }
+        &--upload,
+        &--cancel {
+            width: 262px;
+            padding-top: 16px;
+            padding-bottom: 15px;
+        }
+        &--upload {
+            margin-bottom: 24px;
+        }
+    }
+    @media @desktop-widths {
+        &--download {
+            font-size: 21px;
+        }
+        &--upload {
+            margin-bottom: 0;
+        }
+    }
+}
