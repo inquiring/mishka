@@ -1,0 +1,198 @@
+.main-nav {
+    position: relative;
+    display: flex;
+    min-height: 79px;
+    // временно отталкивает page-main
+    margin-bottom: 345px;
+    background-color: tomato;
+    justify-content: center;
+    @media @tablet-width {
+        min-height: 88px;
+        background-color: lightyellow;
+        justify-content: left;
+    }
+    @media @desktop-width {
+        justify-content: center;
+    }
+}
+
+.main-nav__logo {
+    background: transparent url("../img/logo-mobile.svg") no-repeat;
+    align-self: center;
+    @media @tablet-width {}
+}
+
+// базовые стили для переключателя.
+.main-nav__toggle {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -30px;
+    display: block;
+    width: 70px;
+    height: 100%;
+    font-size: 0;
+    cursor: pointer;
+    border: none;
+    background-color: lightgreen;
+    &:hover {
+        background-color: rgba(23, 31, 40, -0.7);
+    }
+    &:active {
+        background-color: rgba(23, 31, 40, -0.7);
+    }
+    @media @tablet-width {
+        .visually-hidden();
+    }
+}
+
+.main-nav__items {
+    content: "";
+    position: absolute;
+    top: 79px;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    .list-reset();
+    @media @tablet-width {
+        flex-direction: row;
+    }
+    @media @desktop-width {
+        min-width: 1050px;
+    }
+}
+
+.main-nav__item {
+    // align-self: center;
+    // width: 100%;
+    &--new,
+    &--sale,
+    &--info {
+        // font-size: 0;
+        //   .main-nav__link {
+        //           .visually-hidden();
+        //       }
+        display: none;
+    }
+    @media @tablet-width {
+        margin-top: 20px;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        align-self: flex-end;
+        &--info {
+            margin-top: 0;
+            margin-left: 57px;
+        }
+        &--user-search {
+            content: "";
+            position: absolute;
+            bottom: 90%;
+            left: 49%;
+            width: 80px;
+            height: 88px;
+            border-right: 1px solid grey;
+            border-left: 1px solid grey;
+            .main-nav__link {
+                .visually-hidden();
+            }
+        }
+        &--user-basket {
+            content: "";
+            position: absolute;
+            bottom: 96%;
+            left: 61%;
+            height: 88px;
+            width: 260px;
+            .main-nav__link {
+                padding: 35px;
+                padding-right: 0;
+                padding-left: 77px;
+                box-shadow: none;
+            }
+        }
+        &--info {
+            display: block;
+            font-size: 17px;
+        }
+    }
+    @media @desktop-width {
+        &:nth-child(1) {
+            content: "";
+            position: absolute;
+            bottom: 90%;
+            min-width: 186px;
+            margin: 0;
+            border-right: 1px solid grey;
+            .main-nav__link {
+                padding: 35px;
+                padding-right: 0;
+                padding-left: 5px;
+                box-shadow: none;
+            }
+        }
+        &:nth-child(2) {
+            content: "";
+            position: absolute;
+            bottom: 90%;
+            left: 20%;
+            min-width: 210px;
+            margin: 0;
+            .main-nav__link {
+                padding: 35px;
+                padding-right: 0;
+                padding-left: 5px;
+                box-shadow: none;
+            }
+        }
+        &--user-search {
+            left: 66%;
+        }
+        &--user-basket {
+            left: 74%;
+            min-width: 267px;
+            .main-nav__link {
+                padding-left: 80px;
+            }
+        }
+        &--new,
+        &--sale,
+        &--info {
+            display: block;
+            .main-nav__link {
+                font-size: 15px;
+                
+            }
+        }
+        &--new {
+            .main-nav__link {
+                padding-right: 29px;
+            }
+        }
+        &--sale {
+            padding-left: 30px;
+        }
+        &--info {
+          margin-left: 450px;
+        }
+    }
+}
+
+.main-nav__link {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 21px 14px;
+    padding-left: 75px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 0 black;
+    @media @tablet-width {
+        padding-bottom: 0;
+        padding-left: 0;
+        box-shadow: none;
+    }
+}

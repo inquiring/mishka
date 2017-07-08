@@ -27,6 +27,7 @@
 .container() {
   width: 320px;
   margin: 0 auto;
+  
   // от 768 планшетная версия
   @media @tablet-width {
     width: 768px;
@@ -37,34 +38,34 @@
   }
 }
 
-.no-outline() {
-  outline: none;
-  background: transparent;
-  &::before {
-    display: none;
-  }
-}
+// .no-outline() {
+//   outline: none;
+//   background: transparent;
+//   &::before {
+//     display: none;
+//   }
+// }
 
-.container-fluid () {
-  width: auto;
-  @media @tablet-width {
-    width: 84%;
-    /* 640px / 768px ~= 84% */
-    max-width: 960px;
-    /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
-    margin: 0 auto;
-  }
-}
-.bg-triangle() {
-  background-image: url("../img/bg-triangle-white.svg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-.bg-triangle-footer() {
-  background-image: url("../img/bg-triangle-white-footer.svg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
+// .container-fluid () {
+//   width: auto;
+//   @media @tablet-width {
+//     width: 84%;
+//     /* 640px / 768px ~= 84% */
+//     max-width: 960px;
+//     /* 960px / .84 ~= 1142px (центровка начнётся чуть раньше 1200px) */
+//     margin: 0 auto;
+//   }
+// }
+// .bg-triangle() {
+//   background-image: url("../img/bg-triangle-white.svg");
+//   background-position: center top;
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+// }
+// .bg-triangle-footer() {
+//   background-image: url("../img/bg-triangle-white-footer.svg");
+//   background-position: center top;
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+// }
 
