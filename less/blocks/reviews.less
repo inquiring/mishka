@@ -1,0 +1,103 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: 700;
+}
+
+.reviews__title {
+  font-size: 25px;
+  line-height: 30px;
+}
+.reviews__items {
+  .list-reset();
+}
+.reviews__item {
+  font-size: 17px;
+  line-height: 24px;
+}
+.reviews__item-name {
+  font-size: 17px;
+  line-height: 24px;
+}
+.reviews__item-descr {
+  margin-left: 0;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: @ligth-grey;
+}
+.reviews__item-nikname {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  color: @ligth-grey;
+}
+.reviews__controls {
+  // font-size: 0;
+  margin-bottom: 39px;
+}
+.reviews__btn {
+  position: relative;
+
+  display: inline-block;
+
+  width: 130px;
+  height: 51px;
+  padding: 0;
+
+  font-size: 0;
+
+  border: 1px solid #ececec;
+  background-color: @white;
+  // полоска у стрелки
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 43px;
+
+    width: 45px;
+    height: 4px;
+
+    background-color: #000;
+  }
+  // наконечник у стрелки назад
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 42px;
+
+    width: 15px;
+    height: 15px;
+
+    transform: rotate(135deg);
+
+    border-width: 0 4px 4px 0;
+    border-style: solid;
+    border-color: #000;
+    background-color: transparent;
+  }
+  // наконечник у стрелки вперед
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 67px;
+
+    width: 15px;
+    height: 15px;
+
+    transform: rotate(-45deg);
+
+    border-width: 0 4px 4px 0;
+    border-style: solid;
+    border-color: #000;
+    background-color: transparent;
+  }
+}
