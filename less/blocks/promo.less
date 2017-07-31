@@ -1,15 +1,40 @@
 .promo {
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 25px;
+  position: relative;
+
+  margin: 25px 30px;
+  @media @tablet-width {
+    display: flex;
+
+    margin: 25px 0;
+
+    flex-flow: row wrap;
+
+  }
+
 }
 
 .promo__title {
+  margin-top: 0;
   margin-bottom: 12px;
 
   font-size: 25px;
   font-weight: 700;
   line-height: 24px;
+  @media @tablet-width {
+    width: 80%;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media @desktop-width {
+    // width:100%;
+    content:"";
+    position: absolute;
+    left:175px;
+    top:70px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .promo__type {
@@ -18,6 +43,33 @@
   line-height: 20px;
 
   color: @ligth-green;
+  @media @tablet-width {
+    width: 80px;
+    margin: 5px;
+
+    font-size: 17px;
+    line-height: 17px;
+  }
+  @media @desktop-width{
+    width: 175px;
+    height: 570px;
+    margin: 0;
+     align-self: flex-end;
+  }
+}
+.promo__info {
+  @media @tablet-width {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+  }
+  @media @desktop-width{
+    width: 350px;
+    height: 490px;
+    align-self: flex-end;
+  }
+
 }
 
 .promo__descr {
@@ -27,17 +79,54 @@
   line-height: 24px;
 
   color: @ligth-grey;
+  @media @tablet-width {
+    width: 290px;
+    margin-top: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+.promo__image-container {
+  content: "";
+  position: absolute;
+  top: 280px;
+
+  width: 260px;
+  height: 315px;
+  @media @tablet-width {
+    position: inherit;
+    top: 0;
+
+    width: 50%;
+    height: 400px;
+  }
+  @media @desktop-width {
+    width: 525px;
+    height: 640px;
+  }
 }
 .promo__price {
-	text-align: center;
-  color: @ligth-grey;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+
+  text-align: center;
+
+  color: @ligth-grey;
+  @media @tablet-width {
+    width: 290px;
+    font-size: 20px;
+  }
+
 }
 
 .promo__btn {
-	color: @ligth-grey;
+  color: @ligth-grey;
+  @media @tablet-width {
+    width: 290px;
+  }
+  @media @desktop-width{
+    width: 295px;
+  }
 }
-
-
