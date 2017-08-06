@@ -12,8 +12,8 @@
 
 <body>
     <!-- Шапка сайта -->
-    <header class="page-header page-header--index">
-        <div class="page-header__inner">
+    <header class="page-header">
+        <div class="page-header__inner page-header__inner--catalog">
             <h1 class="page-header__title page-header__title--hidden">Сайт Mishka</h1>
             <nav class="main-nav main-nav--opened main-nav--nojs">
                 <a class="main-nav__logo" href="index.html">
@@ -33,13 +33,13 @@
         </div>
     </header>
     <!-- Главное содержимое страницы -->
-    <main class="page-main">
+    <main class="page-main page-main--catalog">
         <h1 class="page-main__title">Каталог товаров</h1>
         <article class="catalog">
             <h2 class="catalog__title catalog__title--hidden">Фотографии товара</h2>
             <div class="catalog-item">
                 <a href="#" class="catalog-item__link">
-                    <img src="http://placehold.it/260x195" alt="Фотография товара" class="catalog__img">
+                    <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Фотография товара" class="catalog__img">
                 </a>
                 <div class="catalog-item__desc">
                     <h3 class="catalog-item__title">Зайчик-попрыгайчик</h3>
@@ -50,7 +50,7 @@
             </div>
             <div class="catalog-item">
                 <a href="#" class="catalog-item__link">
-                    <img src="http://placehold.it/260x195" alt="Фотография товара" class="catalog__img">
+                    <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Фотография товара" class="catalog__img">
                 </a>
                 <div class="catalog-item__desc">
                     <h3 class="catalog-item__title">Корзинка для белья</h3>
@@ -61,7 +61,7 @@
             </div>
             <div class="catalog-item">
                 <a href="#" class="catalog-item__link">
-                    <img src="http://placehold.it/260x195" alt="Фотография товара" class="catalog__img">
+                    <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Фотография товара" class="catalog__img">
                 </a>
                 <div class="catalog-item__desc">
                     <h3 class="catalog-item__title">Большая корзинка для игрушек</h3>
@@ -70,12 +70,12 @@
                     <a class="catalog-item__buy" href="#">Купить</a>
                 </div>
             </div>
-            <section class="catalog-video">
-                <img src="http://placehold.it/260x150" alt="Фотография товара" class="catalog__video">
-                <div class="catalog-video__desc">
-                    <h3 class="catalog-video__title">Процесс производства</h3>
-                    <span class="catalog-video__properties">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</span>
-                    <a class="btn btn--catalog-video catalog-video__btn" href="#">Купить</a>
+            <section class="catalog-item catalog-item--video">
+                <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Видео товара" class="catalog__img catalog__img--video">
+                <div class="catalog-item__desc catalog-item__desc--video">
+                    <h3 class="catalog-item__title catalog-item__title--video">Процесс производства</h3>
+                    <p class="catalog-item__properties catalog-item__properties--video">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+                    <a class="btn btn--catalog-item catalog-item__btn" href="#">Сделать заказ</a>
                 </div>
             </section>
         </article>
@@ -88,9 +88,11 @@
             <!--  -->
             <section class="social">
                 <h2 class="social__title social__title--hidden">Мы есть в социальных сетях</h2>
-                <a class="social__link social__link‐‐ig" href="#">ig</a>
-                <a class="social__link social__link‐‐fb" href="#">fb</a>
-                <a class="social__link social__link‐‐tw" href="#">tw</a>
+                <div class="social__link">
+                    <a class="social__link social__link‐‐ig" href="#">ig</a>
+                    <a class="social__link social__link‐‐fb" href="#">fb</a>
+                    <a class="social__link social__link‐‐tw" href="#">tw</a>
+                </div>
             </section>
             <div class="copyright">
                 <span class="copyright__text">Разработано

@@ -1,25 +1,30 @@
 .page-header {
-    width: 100%;
-    background-color: #fff;
-    
-    @media @tablet-width {
-        min-height: 88px;
-    }
+  width: 100%;
+
+  background-color: #fff;
+  @media @tablet-width {
+    min-height: 88px;
+  }
 }
 
 .page-header__title {
-    .visually-hidden();
+  .visually-hidden();
 }
 
 .page-header__inner {
-    padding-left: 30px;
-    padding-right: 30px;
-    @media @tablet-width {
-        padding-left: 50px;
-        padding-right: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+  @media @tablet-width {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @media @desktop-width {
+    padding-right: 100px;
+    padding-left: 100px;
+    &--catalog,
+    &--form {
+      padding-right: 50px;
+      padding-left: 50px;
     }
-    @media @desktop-width{
-    	padding-left: 100px;
-        padding-right: 100px;
-    }
+  }
 }
