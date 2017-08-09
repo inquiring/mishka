@@ -13,24 +13,22 @@
 <body>
     <!-- Шапка сайта -->
     <header class="page-header page-header--index">
-        <div class="page-header__inner">
-            <h1 class="page-header__title page-header__title--hidden">Сайт Mishka</h1>
-            <nav class="main-nav main-nav--opened main-nav--nojs">
-                <a class="main-nav__logo" href="index.html">
+        <h1 class="page-header__title page-header__title--hidden">Сайт Mishka</h1>
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+            <a class="main-nav__logo" href="index.html">
                     <img src="http://placehold.it/100x40" alt="mishka">
                 </a>
-                <button class="main-nav__toggle" type="button">Открыть меню</button>
-                <ul class="main-nav__items">
-                    <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-                    <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
-                    <li class="main-nav__item main-nav__item--user-search "><a class="main-nav__link" href="#">Поиск по сайту</a></li>
-                    <li class="main-nav__item main-nav__item--user-basket "><a class="main-nav__link" href="#">Корзина: пока пуста</a></li>
-                    <li class="main-nav__item main-nav__item--new "><a class="main-nav__link" href="#">Новые поступления</a></li>
-                    <li class="main-nav__item main-nav__item--sale "><a class="main-nav__link" href="#">Распродажа</a></li>
-                    <li class="main-nav__item main-nav__item--info">Бесплатная доставка по России</li>
-                </ul>
-            </nav>
-        </div>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+                <li class="main-nav__item main-nav__item--user-search "><a class="main-nav__link" href="#">Поиск по сайту</a></li>
+                <li class="main-nav__item main-nav__item--user-basket "><a class="main-nav__link" href="#">Корзина: пока пуста</a></li>
+                <li class="main-nav__item main-nav__item--new "><a class="main-nav__link" href="#">Новые поступления</a></li>
+                <li class="main-nav__item main-nav__item--sale "><a class="main-nav__link" href="#">Распродажа</a></li>
+                <li class="main-nav__item main-nav__item--info">Бесплатная доставка по России</li>
+            </ul>
+        </nav>
     </header>
     <!-- Главное содержимое страницы -->
     <main class="page-main">
@@ -65,9 +63,11 @@
                 <p class="promo__price">Цена: 990 руб.</p>
                 <a class="btn btn--promo promo__btn ">Заказать</a>
             </div>
-            <div class="promo__image-container">
+            <picture class="promo__image-container">
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
                 <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
-            </div>
+            </picture>
         </section>
         <section class="advantages">
             <h2 class="advantages__title advantages__title--hidden">Наши преимущества</h2>
