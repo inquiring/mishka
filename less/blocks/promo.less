@@ -2,13 +2,19 @@
   position: relative;
 
   margin: 25px 30px;
+
   @media @tablet-width {
     display: flex;
 
-    margin: 25px 0;
+    margin: 25px 50px;
+    
 
     flex-flow: row wrap;
 
+  }
+  @media @desktop-width{
+    margin: 0 100px;
+    flex-flow: row nowrap;
   }
 
 }
@@ -104,6 +110,9 @@
   @media @desktop-width {
     width: 525px;
     height: 640px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center -62px;
   }
 }
 .promo__price {
