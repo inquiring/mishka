@@ -1,0 +1,85 @@
+
+// -----------------------------------------------------------
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.radio {
+  width: 40px;
+  height: 40px;
+  margin: 0 3px 0 0;
+
+  vertical-align: top;
+}
+
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.radio + label {
+  cursor: pointer;
+}
+
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */ 
+.radio:not(checked) {
+  .visually-hidden();
+}
+
+.radio:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+
+  margin: 20px 0;
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+  @media @tablet-width {
+    padding: 0 0 0 74px;
+  }
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.radio:not(checked) + label:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: #fff;
+  @media @tablet-width {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.radio:not(checked) + label:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 13px;
+
+  width: 18px;
+  height: 18px;
+
+  transition: all 0.2s; /* анимация, чтобы чекбокс переключался плавно */
+
+  opacity: 0;
+  border-radius: 50%;
+  background: @ligth-green;
+  @media @tablet-width {
+    top: 3px;
+    left: 18px;
+
+    width: 22px;
+    height: 22px;
+  }
+} // Меняем фон чекбокса, когда он включен. 
+.radio:checked + label:after {
+  opacity: 1;
+} // Показываем получение фокуса. 
+.radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
