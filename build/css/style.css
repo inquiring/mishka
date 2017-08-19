@@ -991,10 +991,456 @@ body > * > * > * {
     margin-left: 0;
   }
 }
+.forms {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin: 25px 30px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .forms {
+    margin: 25px 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+.forms__title--hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+.forms__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+@media (min-width: 768px) {
+  .forms__wrapper {
+    box-sizing: border-box;
+  }
+}
+.forms__container {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+@media (min-width: 768px) {
+  .forms__container {
+    padding: 25px 50px;
+  }
+  .forms__container--color,
+  .forms__container--contacts {
+    background-color: #f1f1f1;
+  }
+}
+.forms__content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+@media (min-width: 768px) {
+  .forms__content {
+    margin-left: 167px;
+  }
+  .forms__content--color {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+}
+@media (min-width: 1150px) {
+  .forms__content {
+    margin: 0 175px;
+  }
+  .forms__content--color {
+    margin-right: 0;
+  }
+}
+.forms__legend {
+  position: relative;
+  margin-right: 0;
+  padding-bottom: 15px;
+  color: #63d1bb;
+}
+.forms__legend--contacts {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+.forms__legend::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 82px;
+  width: 178px;
+  height: 1px;
+  background-color: #63d1bb;
+}
+@media (min-width: 768px) {
+  .forms__legend {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -167px;
+  }
+  .forms__legend--name {
+    top: 55px;
+  }
+}
+.forms__item {
+  display: -ms-flexbox;
+  display: flex;
+}
+.forms__item--color {
+  padding: 24px 0;
+}
+@media (min-width: 768px) {
+  .forms__item {
+    width: 250px;
+  }
+  .forms__item--color {
+    padding: 35px 0;
+  }
+}
+.forms__inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 30px 0 10px;
+}
+@media (min-width: 768px) {
+  .forms__inner {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+.forms__label--contacts,
+.forms__label--textarea {
+  position: relative;
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+.forms__label--contacts::after,
+.forms__label--textarea::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 82px;
+  width: 178px;
+  height: 1px;
+  background-color: #63d1bb;
+}
+@media (min-width: 768px) {
+  .forms__label {
+    margin-right: 20px;
+    font-size: 19px;
+  }
+  .forms__label--contacts,
+  .forms__label--textarea {
+    position: absolute;
+    left: -167px;
+  }
+  .forms__label--contacts::after,
+  .forms__label--textarea::after {
+    display: none;
+  }
+  .forms__label--textarea {
+    top: 25px;
+  }
+}
+.forms__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 18px;
+  color: #8d8d8d;
+  border: 2px solid white;
+  border-bottom: 2px solid black;
+}
+@media (min-width: 768px) {
+  .forms__input {
+    font-size: 19px;
+  }
+  .forms__input--contacts {
+    border: 2px solid #f1f1f1;
+    border-bottom: 2px solid black;
+    background-color: #f1f1f1;
+  }
+}
+.forms__textarea {
+  box-sizing: border-box;
+  min-width: 260px;
+  min-height: 140px;
+  margin: 11px 0 49px;
+  padding: 14px 18px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  opacity: 0.5;
+  border: 2px solid #000;
+}
+.forms__btn {
+  padding: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #000;
+  border: 2px solid #000;
+  background: #fff;
+  max-width: 230px;
+}
+.forms__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #8d8d8d;
+}
+@media (min-width: 768px) {
+  .forms__footer {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 50px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+@media (min-width: 1150px) {
+  .forms__footer {
+    margin: 0 175px;
+  }
+}
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.radio {
+  width: 40px;
+  height: 40px;
+  margin: 0 3px 0 0;
+  vertical-align: top;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.radio + label {
+  cursor: pointer;
+}
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+/* Прячем оригинальный чекбокс. */
+.radio:not(checked) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+.radio:not(checked) + label {
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  margin: 20px 0;
+  padding: 0 0 0 60px;
+  /* оставляем слева от label место под псевдочекбокс */
+}
+@media (min-width: 768px) {
+  .radio:not(checked) + label {
+    padding: 0 0 0 74px;
+  }
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.radio:not(checked) + label:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .radio:not(checked) + label:before {
+    width: 54px;
+    height: 54px;
+  }
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.radio:not(checked) + label:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 13px;
+  width: 18px;
+  height: 18px;
+  transition: all 0.2s;
+  /* анимация, чтобы чекбокс переключался плавно */
+  opacity: 0;
+  border-radius: 50%;
+  background: #63d1bb;
+}
+@media (min-width: 768px) {
+  .radio:not(checked) + label:after {
+    top: 3px;
+    left: 18px;
+    width: 22px;
+    height: 22px;
+  }
+}
+.radio:checked + label:after {
+  opacity: 1;
+}
+.radio:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.checkbox {
+  width: 40px;
+  height: 40px;
+  margin: 0 3px 0 0;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  .checkbox {
+    width: 54px;
+    height: 54px;
+  }
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+  cursor: pointer;
+}
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative;
+  /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px;
+  /* оставляем слева от label место под псевдочекбокс */
+}
+@media (min-width: 768px) {
+  .checkbox:not(checked) + label {
+    padding: 0 0 0 74px;
+  }
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .checkbox:not(checked) + label::before {
+    width: 54px;
+    height: 54px;
+    background: none;
+  }
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 35px;
+  height: 25px;
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label::before {
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .checkbox:checked + label::before {
+    background: none;
+  }
+}
+/* Показываем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent url("../img/icon-tick.svg") no-repeat;
+}
+@media (min-width: 768px) {
+  .checkbox:checked + label::after {
+    left: 13px;
+  }
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.5);
+}
 @media (min-width: 768px) {
   .page-main {
     -ms-flex-direction: row;
         flex-direction: row;
+  }
+}
+.page-main__slogan {
+  margin: 25px 30px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #8d8d8d;
+}
+@media (min-width: 768px) {
+  .page-main__slogan {
+    margin: 25px 50px;
+  }
+}
+@media (min-width: 1150px) {
+  .page-main__slogan {
+    margin: 0 100px;
   }
 }
 .page-main__title {
