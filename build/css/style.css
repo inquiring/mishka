@@ -1215,7 +1215,11 @@ body > * > * > * {
   color: #000;
   border: 2px solid #000;
   background: #fff;
-  max-width: 230px;
+}
+@media (min-width: 768px) {
+  .forms__btn {
+    max-width: 230px;
+  }
 }
 .forms__text {
   font-size: 14px;
