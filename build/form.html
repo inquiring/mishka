@@ -33,71 +33,59 @@
     <!-- Главное содержимое страницы -->
     <main class="page-main">
         <h1 class="page-main__title page-main__title--form ">Вязание на заказ</h1>
-        <div class="page-main__slogan-wrapper ">
-            <p class="page-main__slogan page-main__slogan--form ">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-        </div>
+        <p class="page-main__slogan">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="forms " action="https://echo.htmlacademy.ru " method="post ">
             <h2 class="forms__title forms__title--hidden ">Заполни и отправь форму форму заказа</h2>
             <!--  -->
-            <div class="forms__wrapper ">
-                <fieldset class="forms__container forms__container--type ">
-                    <div class="forms__content forms__content--type ">
-                        <legend class="forms__legend forms__legend--type ">ТИП</legend>
-                        <div class="forms__item ">
-                            <label for="interior-radio ">
-                                <input type="checkbox " class="checkbox " id="interior-radio " checked>
-                                <span class="radio-custom "></span>Аксессуар для интерьера
-                            </label>
+            <div class="forms__wrapper">
+                <fieldset class="forms__container forms__container--type">
+                    <div class="forms__content forms__content--type">
+                        <legend class="forms__legend forms__legend--type">ТИП</legend>
+                        <div class="forms__item forms__item--type">
+                            <input type="radio" class="radio" id="interior-radio" name="radio" checked />
+                            <label for="interior-radio">Аксессуар для интерьера</label>
                         </div>
-                        <div class="forms__item ">
-                            <label for="toy-radio ">
-                                <input type="checkbox " class="checkbox " id="toy-radio ">
-                                <span class="radio-custom "></span>Детская игрушка
-                            </label>
+                        <div class="forms__item forms__item--type">
+                            <input type="radio" class="radio" id="toy-radio" name="radio" />
+                            <label for="toy-radio">Детская игрушка</label>
                         </div>
                     </div>
                 </fieldset>
                 <!-- выше форма type -->
-                <fieldset class="forms__container forms__container--color ">
-                    <div class="forms__content forms__content--color ">
-                        <legend class="forms__legend forms__legend--color ">ЦВЕТ</legend>
+                <fieldset class="forms__container forms__container--color">
+                    <div class="forms__content forms__content--color">
+                        <legend class="forms__legend forms__legend--color">ЦВЕТ</legend>
                         <!--  -->
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-1 ">
-                                <input type="checkbox " class="checkbox " id="field-1 " checked>
-                                <span class="checkbox-custom "></span>Белый
-                            </label>
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-1" checked/>
+                            <label for="checkbox-1"> Белый</label>
                         </div>
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-2 ">
-                                <input type="checkbox " class="checkbox " id="field-2 " checked>
-                                <span class="checkbox-custom "></span>Серый
-                            </label>
+                        <!--  -->
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-2" checked/>
+                            <label for="checkbox-2"> Серый</label>
                         </div>
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-3 ">
-                                <input type="checkbox " class="checkbox " id="field-3 ">
-                                <span class="checkbox-custom "></span>«Тиффани»
-                            </label>
+                        <!--  -->
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-3" />
+                            <label for="checkbox-3"> «Тиффани»</label>
                         </div>
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-4 ">
-                                <input type="checkbox " class="checkbox " id="field-4 ">
-                                <span class="checkbox-custom "></span>Черный
-                            </label>
+                        <!--  -->
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-4" />
+                            <label for="checkbox-4"> Черный</label>
                         </div>
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-5 ">
-                                <input type="checkbox " class="checkbox " id="field-5 ">
-                                <span class="checkbox-custom "></span>Розовый
-                            </label>
+                        <!--  -->
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-5" />
+                            <label for="checkbox-5"> Розовый</label>
                         </div>
-                        <div class="forms__item forms__item--color ">
-                            <label for="field-6 ">
-                                <input type="checkbox " class="checkbox " id="field-6 ">
-                                <span class="checkbox-custom "></span>Оранжевый
-                            </label>
+                        <!--  -->
+                        <div class="forms__item forms__item--color">
+                            <input type="checkbox" class="checkbox" id="checkbox-6" />
+                            <label for="checkbox-6"> Оранжевый</label>
                         </div>
+                        <!--  -->
                     </div>
                 </fieldset>
                 <!-- выше форма color -->
@@ -142,8 +130,8 @@
                 </fieldset>
                 <!--  -->
                 <footer class="forms__footer ">
-                    <input class="btn btn--form forms__btn " type="submit " name="order " value="Отправить заказ ">
-                    <p class="forms__text ">*&#8212; обязательные полядля заполнения</p>
+                    <button class="btn btn--form forms__btn " type="submit ">Отправить заказ</button>
+                    <p class="forms__text ">*Поля обязательны для заполнения</p>
                 </footer>
             </div>
         </form>
