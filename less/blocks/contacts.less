@@ -7,15 +7,16 @@
     flex-direction: column;
 
     margin: 30px 50px;
-    
 
     justify-content: center;
   }
   @media @desktop-width {
-    flex-flow: row wrap;
     margin-top: 200px;
+
+    flex-flow: row wrap;
   }
 }
+
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
@@ -24,14 +25,15 @@
     line-height: 50px;
   }
   @media @desktop-width {
+    content: "";
+    position: absolute;
+    top: -95px;
+    left: 175px;
+
     width: 34%;
 
     font-size: 53px;
     line-height: 57px;
-    content: "";
-    position: absolute;
-    top: -95px;
-    left:175px;
   }
 }
 
@@ -85,7 +87,7 @@
       }
     }
   }
-  @media @desktop-width{
+  @media @desktop-width {
     width: 87%;
   }
 }
@@ -94,7 +96,7 @@
   margin-right: 20px;
 
   font-weight: 400;
-  @media @desktop-width{
+  @media @desktop-width {
     width: 40%;
   }
 }
@@ -121,7 +123,7 @@
   @media @desktop-width {
     content: "";
     position: absolute;
-    top:-75%;
+    top: -75%;
     left: 180px;
   }
 }
@@ -131,17 +133,49 @@
   left: -30px;
 
   width: 320px;
+  height: 457px;
+
+  background: url("../img/map-mobile@1x.jpg") no-repeat;
+  background-position: center;
+  @media @retina {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+  iframe {
+    width: 320px;
+    height: 457px;
+  }
   @media @tablet-width {
     top: 240px;
     left: -50px;
 
     width: 768px;
+
+    background-image: url("../img/map-tablet@1x.jpg");
+    @media @retina {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+    iframe {
+      width: 768px;
+      height: 457px;
+    }
   }
   @media @desktop-width {
-    top: -46%;
-    left: 50%;
+    top: -145px;
+    left: 575px;
 
     width: 525px;
     height: 460px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+    @media @retina {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 525px auto;
+    }
+    iframe {
+      width: 525px;
+      height: 457px;
+    }
   }
 }
