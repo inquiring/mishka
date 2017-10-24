@@ -16,7 +16,11 @@
         <h1 class="page-header__title page-header__title--hidden">Сайт Mishka</h1>
         <nav class="main-nav main-nav--opened main-nav--nojs">
             <a class="main-nav__logo" href="index.html">
-                    <img src="http://placehold.it/100x40" alt="mishka">
+                <picture>
+                    <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img src="img/logo-mobile.svg" alt="Mishka logo" height="35" width="86">
+                </picture>
             </a>
             <button class="main-nav__toggle" type="button">Открыть меню</button>
             <ul class="main-nav__items">
@@ -99,6 +103,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 
 </html>

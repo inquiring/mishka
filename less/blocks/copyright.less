@@ -1,36 +1,34 @@
+
 .copyright {
-  display: flex;
-
-  width: 260px;
-  height: 80px;
-
-  border-top: 1px solid @ligth-grey;
-
-  align-content: center;
-  justify-content: space-around;
-  margin:auto;
-  @media @tablet-width {
-    margin: 0;
-    width:180px;
-  }
-}
-
-.copyright__text {
-  display: flex;
+  padding: 0.5rem 0.75rem;
+  padding-top: 17px;
+  padding-bottom: 17px;
 
   font-size: 19px;
   font-weight: 700;
-  line-height: 18px;
-
-  color: #000;
-
-  justify-content: center;
-  // align-items: flex-start;
-  align-self: center;
+  line-height: 19px;
+  justify-content: space-between;
+  @media @desktop-width {
+  	padding-left: 176px;
+  }
 }
 
 .copyright__link {
-  margin-left: 15px;
+  display: block;
 
-  font-size: 0;
+  width: 27px;
+  height: 34px;
 }
+
+use.logo-htmlacademy {
+    fill: #63D1BB;
+    &:active{
+    	opacity: 0.3;
+    }
+ }
+
+ svg path {
+ 	 fill: inherit;
+ }
+
+
