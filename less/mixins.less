@@ -1,146 +1,30 @@
-
 .visually-hidden {
-  position: absolute;
-
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-
-  white-space: nowrap;
-
-  border: 0;
-
-  clip-path: inset(100%);
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
 }
 
-.list-reset() {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+.font-style(@font-size, @line-height, @font-weight, @color) {
+    font-size: @font-size;
+    line-height: @line-height;
+    font-weight: @font-weight;
+    color: @color;
 }
 
-// от 320 мобильная версия
 .container {
-  width: calc(320px - 30px - 30px);
-  margin: 0 auto;
-  padding: 0 30px;
-  // от 768 планшетная версия
-  @media @tablet-width {
-    width: calc(768px - 50px - 50px);
-    padding: 0 50px;
-  }
-  // от 1150 десктопная версия
-  @media @desktop-width {
-    width: calc(1150px - 50px - 50px);
-  }
-}
-
-// .no-outline() {
-//   outline: none;
-//   background: transparent;
-//   &::before {
-//     display: none;
-//   }
-// }
-
-.container-fluid() {
-  width: 260px;
-  margin: 0 30px;
-  @media @tablet-width {
-    width: calc(668/768*100%);
-    /* 668px / 768px ~= 86,98%  668px-'это ширина внутреннего содержимого tablet*/
-    max-width: 1050px;
-    // max-width: calc(1050px / 0.8698); /*1050px-'это ширина внутреннего содержимого desktop*/
-    /* 1050px / 0.8698 ~= 1207px (центровка начнётся чуть раньше 1050px) */
+    width: 260px;
     margin: 0 auto;
-  }
-}
-// .bg-triangle() {
-//   background-image: url("../img/bg-triangle-white.svg");
-//   background-position: center top;
-//   background-repeat: no-repeat;
-//   background-size: 100% auto;
-// }
-// .bg-triangle-footer() {
-//   background-image: url("../img/bg-triangle-white-footer.svg");
-//   background-position: center top;
-//   background-repeat: no-repeat;
-//   background-size: 100% auto;
-// }
-
-.bg-zigzag-fill() {
-  @media @tablet-width {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-
-    width: 100%;
-    height: 2em;
-
-    background: url("../img/bg-zigzag-fill.svg") no-repeat center;
-    background-size: cover;
-  }
-  @media @desktop-width{
-    content: "";
-    position: absolute;
-    height: 43px;
-    bottom: -12px;
-  }
-}
-
-.bg-zigzag-fill-left() {
-  @media @tablet-width {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-
-    width: 100%;
-    height: 1.7em;
-
-    background: transparent url("../img/bg-zigzag-fill.svg") no-repeat center;
-    background-size: cover;
-  }
-}
-.bg-zigzag-fill-right() {
-  @media @tablet-width {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 5px;
-
-    width: 100%;
-    height: 1.7em;
-
-    background: transparent url("../img/bg-zigzag-fill.svg") no-repeat center;
-    background-size: cover;
-  }
-}
-.bg-zigzag-line() {
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
-  background-position: center -100px;
-  background-size: 100% auto;
-}
-
-.title() {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
-
-  color: #000;
-  @media @tablet-width {
-    font-size: 43px;
-    line-height: 50px;
-  }
-  @media @desktop-width {
-    font-size: 53px;
-    line-height: 57px;
-  }
+    @media (@tablet-width) {
+        width: 668px;
+    }
+    @media (@desktop-width) {
+        width: 1050px;
+    }
 }
