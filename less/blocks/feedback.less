@@ -1,0 +1,160 @@
+@import '../variables.less';
+@import '../mixins.less';
+
+.feedback {
+  .container;
+  margin-top: 50px;
+  padding-bottom: 45px;
+
+  .button {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 42px;
+  }
+}
+
+.feedback__title {
+  .font-style(25px, 30px, 700, #000000);
+}
+
+.feedback__blockquote {
+  margin: 0;
+  .font-style(15px, 30px, 400, #444444);
+  margin-bottom: 35px;
+}
+
+feedback__blockquote-source {
+  margin: 25px 0;
+  .font-style(18px, 24px, 400, #000000);
+  font-style: normal;
+}
+
+.feedback__controls {
+  display: flex;
+  width: 258px;
+  min-height: 50px;
+}
+
+.feedback__controls-link {
+  display: flex;
+  width: 129px;
+  border: @border;
+
+  &--next {
+    border-left: none;
+  }
+}
+
+.feedback__controls-icon {
+  margin: auto;
+
+  &:hover {
+    fill: #666666;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
+}
+
+
+
+@media (@tablet-width) {
+
+  .feedback {
+    width: 100%;
+    margin-top: 21px;
+    margin-bottom: 53px;
+    background: url("../img/review@1x.jpg") no-repeat 0 0;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
+
+    .button {
+      position: absolute;
+      top: 37px;
+      right: 0;
+      width: 174px;
+    }
+  }
+
+  .feedback__wrapper {
+    position: relative;
+    display: flex;
+    .container;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback__title {
+    margin-top: 79px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__blockquote {
+    width: 100%;
+    .container;
+    font-size: 17px;
+  }
+
+  .feedback__blockquote-source {
+    width: 238px;
+    margin-top: 48px;
+  }
+
+  .feedback__controls {
+    position: absolute;
+    width: 138px;
+    bottom: 20px;
+    right: 23px;
+  }
+
+  .feedback__controls-link {
+    border: none;
+
+    &--next {
+      padding-left: 30px;
+  }
+  }
+}
+
+
+
+@media (desktop-width) {
+
+  .feedback {
+    .container;
+    margin: 32px auto 100px;
+
+    .button {
+      margin-right: 0;
+    }
+  }
+
+  .feedback__title {
+    margin-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__blockquote {
+    margin-left: 163px;
+  }
+
+  .feedback__blockquote-text {
+    width: 770px;
+    margin: 0;
+  }
+
+  .feedback__blockquote-source {
+    margin-top: 30px;
+  }
+
+  .feedback__controls {
+    right: 20px;
+    bottom: 23px;
+  }
+}
