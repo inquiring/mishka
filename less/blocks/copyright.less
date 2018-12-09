@@ -1,34 +1,58 @@
+@import '../variables.less';
+@import '../mixins.less';
 
 .copyright {
-  padding: 0.5rem 0.75rem;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  display: flex;
+  .container;
+  padding-top: 14px;
+  padding-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+  .font-style(19px, 18px, 700, #000000);
+  border-top: 1px solid #e5e5e5;
 
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 19px;
-  justify-content: space-between;
-  @media @desktop-width {
-  	padding-left: 176px;
+  &:active {
+    opacity: 0.3;
   }
 }
 
-.copyright__link {
-  display: block;
-
-  width: 27px;
-  height: 34px;
+.copyright__logo {
+  padding-left: 30px;
 }
 
-use.logo-htmlacademy {
-    fill: #63D1BB;
-    &:active{
-    	opacity: 0.3;
-    }
- }
+.copyright__logo svg {
+  width: 27px;
+  height: 34px;
+  fill: @color-green;
 
- svg path {
- 	 fill: inherit;
- }
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    fill: #bde3dd;
+  }
+}
 
 
+
+@media (@tablet-width) {
+
+  .copyright {
+    width: 220px;
+    padding: 0;
+    justify-content: flex-end;
+    flex-grow: 1;
+    border: none;
+  }
+}
+
+
+
+@media (@desktop-width) {
+
+  .copyright {
+    width: 350px;
+    padding: 51px 0 51px;
+  }
+}
