@@ -1,26 +1,17 @@
-.btn {
-  display: block;//занимает всю ширину контейнера
-
-  box-sizing: border-box;
-  padding-top: 14px;
-  padding-bottom: 14px;
- 
-
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 20px;
-
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  color: @grey;
-  border: 2px solid @grey;
-  // ---
-  &:hover {
-    color: @white;
-    background-color: @grey;
-  }
-
+@import "../fonts.less";
+.button {
+    display: block;
+    padding: 16px;
+    .font-style(17px, 16px, 700, #444444);
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #444444;
+    box-sizing: border-box;
+    &:hover {
+        color: #ffffff;
+        background: #444444;
+    }
+    &:active {
+        color: #7c7c7c;
+    }
 }
