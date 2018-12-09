@@ -1,0 +1,57 @@
+@import '../variables.less';
+@import '../mixins.less';
+
+.inner-main__title {
+  display: flex;
+  min-height: 177px;
+  background-color: @bg-title-footer;
+}
+
+  h1 {
+    margin: auto;
+    .font-style(27px, 30px, 700, #000000);
+    text-align: center;
+  }
+
+
+
+@media (@tablet-width) {
+
+  .inner-main__title {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 239px;
+    margin-top: -80px;
+    z-index: 1;
+    background: #f1f1f1 url("../img/bg-zigzag-fill.svg") repeat-x 100% 100%;
+    background-size: auto 24px;
+  }
+
+  h1 {
+    margin: 94px auto;
+    font-size: 43px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+
+
+@media (@desktop-width) {
+
+  .inner-main__title {
+    position: relative;
+    height: 274px;
+    margin-top: -49px;
+    z-index: 1;
+    background-size: auto;
+  }
+
+
+  .inner-main__title-catalog {
+    margin: 94px auto;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
