@@ -1,54 +1,62 @@
-.socials {
+@import '../variables.less';
+
+.social {
   display: flex;
+  width: 144px;
+  justify-content: space-between;
+}
 
-  padding: 0.5rem 2rem; //8px 36px
-  padding-top: 17px;
-  padding-bottom: 25px;
+.social__btn {
+  padding: 15px 0 28px;
 
-  list-style: none;
-
-  border-bottom: 1px solid #dcdcdc;
-
-  justify-content: space-around;
-
-  align-items: center;
-    @media @tablet-width {
-  	align-items: center;
-  	padding: 0.5rem 2rem; //8px 36px
+  &--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
   }
 }
 
-// .socials__item:before {
-//   content: none;
-// }
-.socials__link {
-  display: block;
+.social__btn-icon {
 
-  width: 25px;
-  height: 25px;
-
-  font-size: 0;
-  &:hover{
-  	fill: #46c1ae;
-  }
-   &:active {
+  &:hover {
     fill: #46c1ae;
-    fill-opacity: 0.3;
+  }
+
+  &:active {
+    fill: #bde3dd;
   }
 }
 
-// use.icon-insta ,
-// use.icon-fb ,
-// use.icon-twitter {
-//   &:hover {
-//     fill: #46c1ae;
-//   }
-//   &:active {
-//     fill: #46c1ae;
-//     fill-opacity: 0.3;
-//   }
-// }
 
-// svg path {
-//   fill: inherit;
-// }
+
+@media (@tablet-width) {
+
+  .social {
+    border-bottom: none;
+    padding: 0;
+
+    &__btn {
+      padding: 0;
+    }
+  }
+}
+
+
+
+@media (@desktop-width) {
+
+  .social {
+    border-bottom: none;
+    padding: 51px 0 51px;
+
+
+    &__btn {
+      padding: 0;
+    }
+  }
+}
