@@ -23,20 +23,20 @@
     margin: 50px auto;
   }
 
-  .button {
-    margin: 0;
-    background-color: @color-green;
-    color: #ffffff;
-    border: none;
+//   .button {
+//     margin: 0;
+//     background-color: @color-green;
+//     color: #ffffff;
+//     border: none;
 
-    &:hover {
-      background-color: #46c1ae;
-    }
+//     &:hover {
+//       background-color: #46c1ae;
+//     }
 
-    &:active {
-      background-color: #59d5bc;
-    }
-  }
+//     &:active {
+//       background-color: #59d5bc;
+//     }
+//   }
 }
 
 .popup--show {
@@ -86,7 +86,7 @@
 
 
 
-@media (@tablet-width) {
+@media @tablet {
 
   .popup {
     width: 566px;
@@ -97,9 +97,9 @@
       z-index: 4;
     }
 
-    .button {
-      width: 350px;
-    }
+    // .button {
+    //   width: 350px;
+    // }
   }
 
   .popup__title {
@@ -118,7 +118,7 @@
 
 
 
-@media (@desktop-width) {
+@media @desktop {
 
   .popup--show {
     left: 32%;

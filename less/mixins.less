@@ -18,13 +18,34 @@
     color: @color;
 }
 
+// .container {
+//     width: 260px;
+//     margin: 0 auto;
+//     @media @tablet-width {
+//         width: 668px;
+//     }
+//     @media @desktop-width {
+//         width: 1050px;
+//     }
+// }
+
 .container {
-    width: 260px;
+    min-width: @break-mobile;
+    max-width: @break-desktop;
     margin: 0 auto;
-    @media (@tablet-width) {
-        width: 668px;
+    padding-right: @offset-mobile;
+    padding-left: @offset-mobile;
+
+
+    @media @tablet {
+        min-width: @break-tablet;
+        padding-right: @offset-tablet;
+        padding-left: @offset-tablet;
     }
-    @media (@desktop-width) {
-        width: 1050px;
+
+
+    @media @desktop {
+        padding-right: @offset-desktop;
+        padding-left: @offset-desktop;
     }
 }

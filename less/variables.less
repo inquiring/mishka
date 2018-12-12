@@ -1,7 +1,19 @@
-@tablet-width: 'min-width: 768px';
-@desktop-width: 'min-width: 1150px';
-@mobile-width-only: "max-width: 767px";
-@retina: '(min-resolution: 144dpi), (min-resolution: 1.5dppx)';
+@break-mobile: 320px;
+@break-tablet: 700px;
+@break-desktop: 1366px;
+
+@offset-mobile: 20px;
+@offset-tablet: 20px;
+@offset-desktop: 73px;
+
+@mobile: ~"only screen and (max-width: 699px)";
+@mobile-tablet: ~"only screen and (max-width: 1019px)";
+@tablet: ~"only screen and (min-width: 700px) and (max-width: 1019px)";
+@tablet-desktop: ~"only screen and (min-width: 700px)";
+@desktop: ~"only screen and (min-width: 1020px)";
+
+@retina2x: ~"(min-resolution: 144dpi)", ~"(min-resolution: 1.5dppx)";
+
 
 @bg-title-footer: #f1f1f1;
 @color-bg: #ffffff;
@@ -10,3 +22,24 @@
 
 @text-color: #444444;
 @border: 1px solid #ececec;
+
+@break-mobile: 320px;
+@break-tablet: 700px;
+@break-desktop: 1366px;
+
+@offset-mobile: 20px;
+@offset-tablet: 20px;
+@offset-desktop: 73px;
+
+
+@fz_base: 18px;
+@fz_xxsmall: ceil(@fz_base * 0.66);   /* 12px */
+@fz_xxsmall-btn: ceil(@fz_base * 0.72);/* 13px */
+@fz_xsmall: ceil(@fz_base * 0.77);    /* 14px */
+@fz_small: ceil(@fz_base * 0.88);     /* 16px */
+@fz_medium: ceil(@fz_base * 1.11);    /* 20px */
+@fz_medium-btn: ceil(@fz_base * 1.16);/* 21px */
+@fz_xmedium: ceil(@fz_base * 1.33);   /* 24px */
+@fz_large: ceil(@fz_base * 1.66);     /* 30px */
+@fz_xlarge: ceil(@fz_base * 2.22);    /* 40px */
+@fz_xxlarge: ceil(@fz_base * 2.77);   /* 50px */
