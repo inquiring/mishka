@@ -1,0 +1,223 @@
+.navigation {
+    display: block;
+  
+  
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+    }
+
+    &__item {
+        position: relative;
+        // margin-left: var(--space-xxxl);
+        padding: 25px 0;
+    }
+
+    &__item_view_link {
+        display: block;
+        text-decoration: none;
+        transition: color .15s;
+        & .text:hover {
+            color: #666;
+        }
+        & .text:active {
+            color: #b2b2b2;
+        }
+        
+    }
+   
+
+    & .icon {
+        width: 28px;
+        
+    }
+  }
+ 
+.navigation__item_view_link:hover svg {
+    fill: #63d1bb;    
+}
+.navigation__item_view_link:active svg {
+    fill: #b2b2b2;    
+}
+  
+@media @mobile {
+  .navigation {
+    margin-left: -1 * @offset-mobile;
+    margin-right: -1 * @offset-mobile;
+    border-top: 1px solid @bg_white-opacity;
+
+    &__item {
+        border-bottom: 1px solid #ececec;
+        
+    }
+    &--site {
+        .navigation__list .navigation__item {
+            &:first-child {
+                border-top: 1px solid #ececec;
+            }
+        }
+    }
+    
+    
+
+    &__link {
+      display: block;
+      min-height: 60px;
+    //   padding-top: 15px;
+    //   padding-bottom: 15px;
+    //   text-transform: uppercase;
+      border-top: 1px solid @bg_white-opacity;
+      border-bottom: 1px solid #000;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+  }
+    
+}
+  
+  
+@media @mobile-tablet {
+  .navigation {
+      // position: static;
+      // width: auto;
+      // background-color: @bg_blue;
+      &__item--hide-mobile-tablet {
+        display: none;
+        }
+
+
+      &--closed {
+      display: none;
+      }
+
+
+      &--positioned {
+      // position: absolute;
+      // top: 100%;
+      // left: 0;
+      // right: 0;
+      }
+
+
+      &__link {
+      display: block;
+      text-decoration: none;
+      transition: all 0.3s;
+      }
+  }
+}
+  
+  
+@media @tablet {
+// .navigation {
+//   margin-left: -1 * @offset-tablet;
+//   margin-right: -1 * @offset-tablet;
+// }
+.navigation_display_inline-block {
+    display: inline-block;
+}
+.navigation {
+    // max-width: 790px;
+    // padding-top: 45px;
+
+    &--site {
+        order: 2;
+        position: absolute;
+        top: @h_header-tablet;
+        .navigation__list {
+            &>:first-child {
+                margin-left: 0;
+            }     
+        }
+    }
+
+    &--user {
+        order: 1;
+        .navigation__list {
+          justify-content: flex-end;
+          &>:first-child {
+              width: 80px;
+              border-left: 1px solid #ececec;
+              border-right: 1px solid #ececec;  
+              & .text_size_l {
+                font-size: 0;
+              }  
+          }
+        }
+    }
+
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+
+
+    &__item {
+      margin-left: @gutter_nav;
+    //   padding-bottom: 30px;
+    }
+  }
+}
+  
+  
+  @media @desktop {
+    .navigation_display_inline-block {
+        display: inline-block;
+    }
+    .navigation {
+    //   max-width: 790px;
+    //   padding-top: 45px;
+
+
+      &--site {
+          order: 1;     
+      }
+
+      &--user {
+          order: 2;
+          .navigation__list {
+            justify-content: flex-end;
+            &>:first-child {
+                width: 80px;
+                border-left: 1px solid #ececec;
+                border-right: 1px solid #ececec;  
+                & .text_size_l {
+                  font-size: 0;
+                }  
+            }
+          }
+      }
+  
+  
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        // font-weight: 400;
+        // line-height: 1;
+      }
+
+  
+  
+      &__item {
+        margin-left: @gutter_nav;
+        padding: 28px 0 29px;
+      }
+  
+  
+      &__link {
+        position: relative;
+        padding: 0;
+        text-decoration: none;
+        line-height: 1;
+        transition: all 0.3s;
+      }
+    }
+  }
+  

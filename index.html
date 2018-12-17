@@ -9,7 +9,7 @@
   <title>HTML Academy: Мишка</title>
 </head>
 
-<body class="page page_theme_islands theme theme_color_whitepaper-default theme_space_default theme_breakpoint_default theme_size_default theme_gap_small theme_menu_default theme_font_museo">
+<body class="page theme theme_color_whitepaper-default theme_space_default theme_size_default">
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <symbol id="icon-cart" viewBox="264.205 370.961 20.294 18.849">
       <path d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 1 0-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 0 0-1.341-.671l-3.407 6.814h-3.151a.75.75 0 0 0 0 1.5h.157l.855 2.991a.737.737 0 0 0-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 0 0 .698-.739.738.738 0 0 0-.316-.596l.854-2.991h.157a.75.75 0 1 0-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
@@ -95,31 +95,84 @@
     </symbol>
   </svg>
 <!--    HEADER CONTAINER-->
-<header class="menu">
-    <div class="menu__container tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center">
-        <a class="menu__logo">
-            <picture>
-                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-            </picture>
-        </a>
-        <div class="menu__nav">
-        <a class="text text_size_m text_view_primary text_weight_bold menu__item menu__item_view_link" href="catalog.html" title="Каталог товаров">Каталог товаров</a>
-        <a class="text text_size_m text_view_primary text_weight_bold menu__item menu__item_view_link" href="form.html" title="Контакты">Вязание на заказ</a>
-        <a class="text text_size_m text_view_primary text_weight_bold menu__item menu__item_view_link hidden-s hidden-m" href="#" title="Новые поступления">Новые поступления</a>
-        <a class="text text_size_m text_view_primary text_weight_bold menu__item menu__item_view_link hidden-s hidden-m" href="#" title="Распродажа">Распродажа</a>
+<header id="header" class="page-header">
+    <div class="container">
+        <div class="page-header__inner">
+            <div class="page-header__logo">
+                <div class="logo">
+                    <picture>
+                        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                        <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+                    </picture>
+                </div>
+            </div>
+        <div class="page-header__btn-burger js-toggle">
+            <span></span>
         </div>
-        <div class="menu__user">
-        <button class="button button_theme_islands button_size_l button__control i-bem" data-bem="{&quot;button&quot;:{}}" role="button" type="button"><span class="icon icon_social_search"></span><span class="button__text">Поиск по сайту</span></button>
-        <a class="text text_size_m text_view_primary text_weight_bold menu__item menu__item_view_link nav__basket-icon" href="form.html" title="Корзина: пока пуста">Корзина: пока пуста</a>
-        </div>      
+        <nav id="nav" class="navigation navigation--site page-header__navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__item_view_link">
+                        <span class="text text_size_l text_view_primary text_weight_bold">Каталог товаров</span>   
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="photo.html" class="navigation__item_view_link">
+                        <span class="text text_size_l text_view_primary text_weight_bold">Вязание на заказ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="nav" class="navigation navigation--user page-header__navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__item_view_link">
+                            <span class="icon">
+                                <svg class="icon_user_search" width="20" height="17">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-search"></use>
+                                </svg>
+                            </span>
+                            <span class="text text_size_l text_view_primary text_weight_bold">Поиск по сайту</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="photo.html" class="navigation__item_view_link">
+                            <span class="icon">
+                                <svg class="icon_user_cart" width="20" height="17">
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-cart"></use>
+                                </svg>
+                            </span>
+                            <span class="text text_size_l text_view_primary text_weight_bold">Корзина: пока пуста</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
-  <main>
-    <section class="slogan">
-      <h1>Милые штуки ручной<br> работы для дома</h1>
-    </section>
+  <main class="page-content">
+      <div class="hero">
+        <div class="container">
+            <div class="text text_size_m text_align_right text--hide-mobile decorator_space-v_xl">Бесплатная доставка по России</div>
+            <nav id="" class="navigation navigation_display_inline-block hero__navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--hide-mobile-tablet">
+                        <a href="form.html" class="navigation__item_view_link text text_size_l text_view_primary text_weight_bold">
+                            <span class="text text_size_l text_view_primary text_weight_bold">Новые поступления</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--hide-mobile-tablet">
+                        <a href="#" class="navigation__item_view_link">
+                            <span class="text text_size_l text_view_primary text_weight_bold">Распродажа</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> 
+            <h1 class="text text_align_center decorator_indent-t_xxxxl">Милые штуки ручной<br> работы для дома</h1>
+            
+        </div> 
+      </div>
     <section class="category">
       <ul class="category__list">
         <li class="category__list-item">
@@ -140,7 +193,7 @@
         </li>
       </ul>
     </section>
-    <article class="week-item">
+    <!-- <article class="week-item">
       <div class="week-item__wrapper">
         <div class="week-item__name">
           <h2 class="week-item__name-title">Вязаные корзинки</h2>
@@ -299,7 +352,7 @@
         </a>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <section class="popup">
     <p class="popup__title">Добавить в корзину</p>

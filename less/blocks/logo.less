@@ -1,57 +1,32 @@
-@import '../variables.less';
-
 .logo {
-  position: relative;
-  display: block;
+    position: relative;
+  
+    &__link {
+      .text-hide();
+      display: block;
+    }
+}
+  
+  
+@media @mobile {
+  .logo {
   text-align: center;
-}
-
-.logo img {
-  width: 86px;
-  height: auto;
-  padding: 13px 0;
-
-  &:hover {
-  opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
-
 
 
 @media @tablet {
-
-  .logo {
-    display: flex;
-    width: 321px;
-    height: 80px;
-    padding: 0;
-    justify-content: flex-start;
-    align-items: center;
-    border-right: @border;
-  }
-
   .logo img {
-    width: 114px;
+      width: 112px;
+      height: 46px;
   }
 }
-
 
 
 @media @desktop {
-  .logo {
-    width: 306px;
-    min-height: 85px;
-    order: 2;
-    justify-content: center;
-    border: none;
-  }
-
   .logo img {
-    width: 150px;
-    vertical-align: middle;
+      width: 148px;
+      height: 73px;
   }
 }
+  
