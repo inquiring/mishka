@@ -1,22 +1,31 @@
 .icon {
-    min-width: 1em;
-  }
-  
-  .icon {
-    display: inline-block;
-    text-align: center;
-    background: 50% no-repeat;
-    fill:#d3d2d2;
-  }
-  
-//   .icon_user_search {
-//     background-image: url("../../img/icon-search.svg");
-//   }
-//   .icon_user_cart {
-//     background-image: url("../../img/icon-cart.svg");
-//   }
-  
-  .icon:empty:after {
-    visibility: hidden;
-    content: '\00A0';
-  }
+  min-width: 1em;
+  display: inline-block;
+  text-align: center;
+  background: 50% no-repeat;
+  fill: #d3d2d2;
+}
+
+.icon:empty::after {
+  visibility: hidden;
+  content: "\00A0";
+}
+
+.icon_view_green {
+  fill: #3bb09d;
+}
+
+.icon_size_l {
+  width: 32px;
+  height: 32px;
+}
+
+.icon_size_xl {
+  width: 38px;
+  height: 38px;
+}
+
+.icon_size_xxl {
+  width: 50px;
+  height: 50px;
+}

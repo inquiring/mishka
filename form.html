@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://whitepaper.tools/cdn/whitepaper-1.0.0.min.css">
   <title>Форма заказа</title>
 </head>
 
-<body>
+<body class="page page_theme_mishka theme theme_color_mishka theme_space_default theme_gap_small theme_breakpoint_default theme_size_default theme_font_opensans">
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <symbol id="icon-cart" viewBox="264.205 370.961 20.294 18.849">
       <path d="M283.75 378.19h-3.151l-3.407-6.814a.75.75 0 1 0-1.341.671l3.071 6.143h-9.138l3.072-6.143a.75.75 0 0 0-1.341-.671l-3.407 6.814h-3.151a.75.75 0 0 0 0 1.5h.157l.855 2.991a.737.737 0 0 0-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 0 0 .698-.739.738.738 0 0 0-.316-.596l.854-2.991h.157a.75.75 0 1 0-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.836h15.359l-.81 2.836z" />
@@ -89,172 +90,320 @@
     <symbol id="icon-twitter" viewBox="52.253 53.771 23.494 20.168">
       <path d="M75.706 57.855c-.227-.366-.909-.277-1.407-.371h-1.112c.142-.353.343-.646.52-.963.056-.438.254-.734.223-1.26.129-.167.176-.417.296-.593.104-.144.242-.477.074-.667-.051-.221-.295-.249-.593-.222a.515.515 0 0 0-.222.148c-.448.433-.778 1.014-1.261 1.408-.009.008-.062 0-.074 0-.087.005-.033.046-.075.074-.146.098-.257.152-.369.223-.284.176-.547.445-.891.519-.529-.211-1.156-.326-1.852-.37-1.157.102-2.303.215-3.038.741-.911.35-1.477 1.042-2.149 1.63-.049.32-.342.398-.37.741-.005.045-.012.088-.073.074.043.241-.051.345-.074.519-.001.133.199.431 0 .52-.822-.12-1.485-.63-2.149-.964-.718-.36-1.468-.604-2.074-1.111-.716-.322-1.26-.816-1.778-1.334-.208-.312-.542-.496-.667-.89-.379-.164-.175-.912-.741-.889-.315-.043-.345.199-.444.37-.07.227-.361.232-.371.519-.004.046-.011.088-.074.075-.17 1.089-.527 1.992-.519 3.26.129.415.35.738.593 1.038-.418.051-.716.222-.89.519-.06 1.073.378 1.647.742 2.297.134.384.352.685.593.963.017.229.206.288.296.445.019.105.123.125.149.223-.04.105.289.18.073.221-.413.131-1.016.07-1.259.371-.109.279-.109.833 0 1.111.034.237.282.262.296.519.499.417 1.082.747 1.631 1.112.574.166 1.211.271 1.852.37-.102.343-.338.551-.593.741-.78.381-1.849.474-2.742.74-.555.038-.956.23-1.556.223-.333.127-.854.075-1.112.223-.122.068-.102.096-.222.221-.134.412.111.74.444.89-.005.253.219.276.371.371.089.183.254.29.445.37.544.468 1.268.759 1.927 1.112.83.183 1.648.376 2.52.519.896.116 1.901.124 2.816.222h.963c.511.132 1.23.054 1.853.074.095-.102.322-.073.519-.074.522-.269 1.196-.385 1.631-.74.574-.241.989-.642 1.557-.89.866-.765 1.937-1.324 2.519-2.37.205-.189.351-.438.445-.74.265-.156.385-.454.593-.667.404-.41.706-.924 1.037-1.4.319-.496.576-1.054.89-1.556-.01-.405.306-.484.296-.89.193-.226.177-.662.371-.88-.033-.255.029-.415.074-.594.047-1.281-.047-2.422-.297-3.407.588-.155 1.181-.302 1.631-.593.52-.206.993-.603.808-1.281zm-3.408 4.076c-.153.859-.615 1.41-1.038 2.001.059.379-.104.538-.073.889a4.303 4.303 0 0 0-.371 1.037c-.203.267-.332.606-.519.89-.366.548-.777 1.051-1.186 1.557-.378.56-.912.965-1.334 1.481-.42.493-.942.885-1.407 1.334-.474.17-.89.396-1.26.667a5.06 5.06 0 0 0-.667.296c-.177.146-.499.145-.668.29-1.086.147-2.3.17-3.555.148-1.031-.105-2.115-.159-3.039-.371-.922-.189-1.511-.712-2.297-1.037.153-.242.634-.154.963-.222.031-.166.394-.003.444-.149.257.06.285-.109.52-.07.563-.201 1.23-.302 1.705-.593.282-.138.406-.434.667-.593.033-.189.104-.341.222-.444.047-.275.201-.441.148-.815.111-.21.299-.343.296-.667-.074-.147-.128-.316-.296-.371-.026-.196-.377-.067-.444-.222-.255.032-.416-.029-.593-.075-.154-.043-.487.092-.519-.073-.842-.023-1.3-.43-1.853-.74.431-.262 1.032-.353 1.333-.742.516-.076 1.058-.129 1.112-.666 0-.717-.771-.661-1.333-.815-.773-.66-1.194-1.672-1.779-2.52.238-.157.564-.226.741-.444.454.058.54-.251.667-.52.019-.488-.333-.605-.593-.815a3.49 3.49 0 0 1-.667-.74c-.003-.818-.021-1.652.074-2.372.063-.014.07.029.074.074.227.441.559.775.815 1.186.532.357.925.853 1.556 1.112.452.413 1.108.621 1.557 1.038.601.263 1.158.57 1.704.889.669.194 1.056.673 2.001.593.198-.098.394-.199.593-.297.258-.456-.059-1.079.147-1.63.255-.659.797-1.031 1.26-1.481.29-.155.555-.335.815-.519.347-.098.675-.216.964-.37a6.223 6.223 0 0 0 1.037-.148h1.26c.244.052.475.119.74.148.209.137.38.313.666.371.789.693 1.271 1.696 1.409 3.039-.122.484.053.873.001 1.481zm.296-5.632c-.129.34-.23.707-.593.815-.017-.105-.122-.125-.147-.222-.012-.209.209-.186.296-.296.162-.085.245-.248.444-.297-.007-.09.108-.046 0 0zm-5.484 3.038c.163.135.284.31.519.371.101.221.314.327.594.37.047-.15.346-.049.37-.222.174-.023.166-.229.296-.297-.018-.55-.129-1.006-.37-1.333-.758-.423-1.676.039-1.409 1.111z" />
     </symbol>
-    <symbol id="icon-video" viewBox="0 0 32 32">
+    <symbol id="icon-tpl-layout__container_size_m" viewBox="0 0 32 32">
       <path d="M26 15l6-4v16l-6-4v-8zm-2 0v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-8a4 4 0 0 1 4-4h10a2 2 0 0 1 2-2V7H5a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1v3a2 2 0 0 1 2 2 4 4 0 0 1 4 4zm-12 0H4v8h8v-8zm8 1a1 1 0 0 0-1-1h-4a1 1 0 1 0 0 2h4a1 1 0 0 0 1-1z" />
     </symbol>
   </svg>
-  <header class="page-header">
-    <nav class="menu  menu--closed  menu--nojs">
-      <div class="logo">
-        <a href="index.html">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
-          </picture>
-        </a>
-        <button class="menu__toggle" type="button"></button>
-      </div>
-      <ul class="menu__list">
-        <li class="menu__list-item">
-          <a href="catalog.html" class="menu__link  menu__list-item-link">Каталог товаров</a>
-        </li>
-        <li class="menu__list-item">
-          <a href="#" class="menu__link  menu__list-item-link">Вязание на заказ</a>
-        </li>
-      </ul>
-      <ul class="menu__list-users">
-        <li class="menu__list-users-item  menu__list-users-item--search">
-          <a href="#" class="menu__link  menu__list-users-item-link  menu__list-users-item-link--search">
-            <svg class="menu__list-users-item-link-icon  menu__list-users-item-link-icon--search" width="20" height="17">
-              <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-search"></use>
-            </svg>
-            <p class="menu__list-users-item-text  menu__list-users-item-text--hidden">
-              Поиск по сайту
-            </p>
-          </a>
-        </li>
-        <li class="menu__list-users-item">
-          <a href="#" class="menu__link  menu__list-users-item-link">
-            <svg class="menu__list-users-item-link-icon  menu__list-users-item-link-icon--cart" width="20" height="17">
-              <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-cart"></use>
-            </svg>
-            <p class="menu__list-users-item-text">
-              Корзина: пока пуста
-            </p>
-          </a>
-        </li>
-      </ul>
-      <ul class="menu__list-new">
-        <li class="menu__list-new-item">
-          <a href="#" class="menu__link  menu__list-new-item-link">Новые поступления</a>
-        </li>
-        <li class="menu__list-new-item">
-          <a href="#" class="menu__link  menu__list-new-item-link">Распродажа</a>
-        </li>
-        <li class="menu__list-new-item">
-          Бесплатная доставка по России
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="form-main">
-    <section class="form-main__title">
-      <h1>Вязание на заказ</h1>
-    </section>
-    <p class="form-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и
-      мы свяжемся с вами, чтобы уточнить детали.</p>
-    <form class="filter" action="/buy-mail" method="post">
-      <div class="filter__wrapper  filter__wrapper--container">
-        <p class="filter__wrapper-title  filter__wrapper-title--radio  filter__wrapper-title--green-line">Тип</p>
-        <ul class="filter__wrapper-list">
-          <li class="filter__wrapper-item  filter__wrapper-item--radio">
-            <input class="filter__wrapper-item-input" type="radio" name="radio" id="accessory" checked>
-            <label for="accessory" class="filter__wrapper-label filter__wrapper-label--button">Аксессуар для интерьера</label>
-          </li>
-          <li class="filter__wrapper-item  filter__wrapper-item--radio">
-            <input class="filter__wrapper-item-input" type="radio" name="radio" id="toy">
-            <label for="toy" class="filter__wrapper-label filter__wrapper-label--radio">Детская игрушка</label>
-          </li>
-        </ul>
-      </div>
-      <div class="filter__wrapper  filter__wrapper--bg">
-        <div class="filter__wrapper-color  filter__wrapper--container">
-          <p class="filter__wrapper-title  filter__wrapper-title--checkbox  filter__wrapper-title--green-line">Цвет</p>
-          <ul class="filter__wrapper-color-list">
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="white" id="white" checked>
-              <label for="white" class="filter__wrapper-label  filter__wrapper-label--checkbox">Белый</label>
-            </li>
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="grey" id="grey" checked>
-              <label for="grey" class="filter__wrapper-label  filter__wrapper-label--checkbox">Серый</label>
-            </li>
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="tiffany" id="tiffany">
-              <label for="tiffany" class="filter__wrapper-label  filter__wrapper-label--checkbox">«Тиффани»</label>
-            </li>
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="black" id="black">
-              <label for="black" class="filter__wrapper-label  filter__wrapper-label--checkbox">Черный</label>
-            </li>
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="pink" id="pink">
-              <label for="pink" class="filter__wrapper-label  filter__wrapper-label--checkbox">Розовый</label>
-            </li>
-            <li class="filter__wrapper-item">
-              <input class="filter__wrapper-item-input" type="checkbox" name="orange" id="orange">
-              <label for="orange" class="filter__wrapper-label  filter__wrapper-label--checkbox">Оранжевый</label>
-            </li>
-          </ul>
+  <div class="tpl-layout">
+    <div class="tpl-layout__section">
+      <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center">
+        <div class="menu menu_theme_mishka menu_size_xxl menu__control i-bem" data-bem='{"menu":{}}' role="menu"
+          tabindex="0">
+          <div class="menu__btn-burger js-toggle menu__btn-burger--show menu__btn-burger--active">
+            <span></span>
+          </div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348151">
+            <a class="menu__logo link link__control i-bem" data-bem='{"link":{}}' role="link" href="index.html">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+              </picture>
+            </a>
+          </div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348152"><a class="text text_view_primary text_weight_bold link link__control i-bem"
+              data-bem='{"link":{}}' role="link" href="catalog.html">Каталог товаров</a></div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348153"><a class="text text_view_primary text_weight_bold link link__control i-bem"
+              data-bem='{"link":{}}' role="link" href="#">Вязание на заказ</a></div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348154">
+            <a class="pt-icon-plus text text_view_primary text_weight_bold link link__control i-bem" data-bem='{"link":{}}'
+              role="link" href="#">
+              <span class="pt-icon-plus__icon">
+                <svg class="icon icon_size_s icon_view_secondary icon_name_search">
+                  <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-search"></use>
+                </svg>
+              </span>
+              <span class="pt-icon-plus__block pt-icon-plus__icon_indent-l_l">Поиск по сайту</span>
+            </a>
+          </div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348155">
+            <a class="pt-icon-plus text text_view_primary text_weight_bold link link__control i-bem" data-bem='{"link":{}}'
+              role="link" href="#">
+              <span class="pt-icon-plus__icon pt-icon-plus__icon_indent-r_l">
+                <svg class="icon icon_size_s icon_view_secondary icon_name_trash">
+                  <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-cart"></use>
+                </svg>
+              </span>
+              <span class="pt-icon-plus__block">Корзина: пока пуста</span>
+            </a>
+          </div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348156"><a class="text text_view_primary text_weight_bold link link__control i-bem"
+              data-bem='{"link":{}}' role="link" href="#">Новые поступления</a></div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka i-bem" data-bem='{"menu__item":{}}' role="menuitem"
+            id="uniq14953563348157"><a class="text text_view_primary text_weight_bold link link__control i-bem"
+              data-bem='{"link":{}}' role="link" href="#">Распродажа</a></div>
+          <div class="menu__item menu__item_type_link menu__item_theme_mishka decorator_space-v_xl">Бесплатная доставка
+            по России</div>
         </div>
       </div>
-      <div class="filter__wrapper  filter__wrapper--container">
-        <p class="filter__wrapper-title  filter__wrapper-title--green-line">ФИО</p>
-        <ul class="filter__wrapper-inner">
-          <li class="filter__wrapper-inner-item">
-            <label for="name" class="filter__label">Имя:</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
-          </li>
-          <li class="filter__wrapper-inner-item">
-            <label for="surname" class="filter__label">Фамилия:</label>
-            <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
-          </li>
-          <li class="filter__wrapper-inner-item">
-            <label for="middle-name" class="filter__label">Отчество:</label>
-            <input type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
-          </li>
-        </ul>
-      </div>
-      <div class="filter__wrapper  filter__wrapper--contacts">
-        <div class="filter__wrapper-container  filter__wrapper-container--contacts  filter__wrapper--container">
-          <div class="filter__wrapper-contacts  filter__wrapper-contacts--info">
-            <p class="filter__wrapper-title  filter__wrapper-title--phone  filter__wrapper-title--green-line">Тел</p>
-            <label for="phone" class="filter__label filter__label--hidden">Телефон</label>
-            <input type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
-            <svg class="filter__label-icon" width="25" height="24">
-              <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-phone"></use>
-            </svg>
-          </div>
-          <div class="filter__wrapper-contacts  filter__wrapper-contacts--info">
-            <p class="filter__wrapper-title  filter__wrapper-title--email  filter__wrapper-title--green-line">E-mail</p>
-            <label for="email" class="filter__label--hidden">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Ваш Email" required>
-            <svg class="filter__label-icon" width="32" height="21">
-              <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-mail"></use>
-            </svg>
+    </div>
+    <main>
+      <div class="tpl-layout__section hero">
+
+        <div class="hero__intro">
+          <div class="hero__description">
+            <h1 class="text text_size_h1 text_align_center">Вязание на заказ</h1>
           </div>
         </div>
       </div>
-      <div class="filter__wrapper  filter__wrapper--more  filter__wrapper--container">
-        <p class="filter__wrapper-title  filter__wrapper-title--more  filter__wrapper-title--green-line">Доп</p>
-        <label for="more" class="filter__label--hidden">Дополнительно</label>
-        <textarea id="more" name="more" placeholder="Опишите все ваши  пожелания к заказу">
-          </textarea>
-      </div>
-      <div class="filter__wrapper">
-        <div class="filter__wrapper-tip  filter__wrapper--container">
-          <p class="filter__wrapper-tip-text">*Поля обязательны для заполнения</p>
-          <button class="button" type="submit">Отправить заказ</button>
+      <div class="tpl-layout__section container">
+        <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center">
+          <div class="tpl-grid tpl-grid_xs-columns_2 tpl-grid_s-columns_4 tpl-grid_m-columns_6 ">
+            <div class="tpl-grid__fraction"></div>
+            <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_2 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_4 ">
+              <p class="text text_size_p text_view_secondary">Мы будем рады воплотить в жизнь ваши пожелания! Заполните
+                простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </form>
+      <!-- * form * -->
+      <form class="pt-form form" action="/buy-mail" method="POST">
+        <!-- ТИП -->
+        <div class="tpl-layout__section container">
+          <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center decorator decorator_space-v_xl">
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <p class="text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">Тип</p>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <div class="pt-form__item pt-form__item_space-v_m form__item">
+                  <span class="radio-group radio-group_theme_mishka radio-group_size_17 control-group i-bem" data-bem="{&quot;radio-group&quot;:{}}"
+                    role="radiogroup">
+                    <label class="radio radio_theme_mishka radio_size_17 i-bem radio_js_inited radio_checked radio_hovered radio_focused"
+                      data-bem="{&quot;radio&quot;:{}}">
+                      <span class="radio__box"><input class="radio__control" type="radio" name="radio-line" value="1"
+                          checked="checked"></span>
+                      <span class="radio__text text text_weight_700" role="presentation">Аксессуар для интерьера</span>
+                    </label><br>
+                    <label class="radio radio_theme_mishka radio_size_17 i-bem" data-bem="{&quot;radio&quot;:{}}">
+                      <span class="radio__box"><input class="radio__control" type="radio" name="radio-line" value="2"></span>
+                      <span class="radio__text text text_weight_700" role="presentation">Детская игрушка</span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ЦВЕТ -->
+        <div class="tpl-layout__section form_color-bg_ghost container">
+          <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center decorator decorator_space-v_xl">
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <p class="text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">Цвет</p>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <div class="pt-form__item pt-form__item_space-v_xs form__item">
+                  <span class="checkbox-group checkbox-group_theme_mishka checkbox-group_size_60 control-group i-bem "
+                    data-bem='{"checkbox-group":{}}' role="group">
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem checkbox_js_inited checkbox_checked checkbox_hovered checkbox_focused"
+                      data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="1">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">Белый</span>
+                    </label><br>
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem" data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="2">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">Серый</span>
+                    </label><br>
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem" data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="3">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">«Тиффани»</span>
+                    </label><br>
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem" data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="4">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">Черный</span>
+                    </label><br>
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem" data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="5">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">Розовый</span>
+                    </label><br>
+                    <label class="checkbox checkbox_theme_mishka checkbox_size_17 i-bem" data-bem='{"checkbox":{}}'>
+                      <span class="checkbox__box">
+                        <input class="checkbox__control" type="checkbox" name="checkbox-line" value="6">
+                      </span>
+                      <span class="checkbox__text text text_weight_700" role="presentation">Оранжевый</span>
+                    </label><br>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ФИО -->
+        <div class="tpl-layout__section container">
+          <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center decorator decorator_space-v_xl">
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <p class="text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">ФИО</p>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <div class="pt-form__item pt-form__item_space-v_xs form__item">
+                  <div class="pt-form__item">
+                    <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_center form__item_display_block">
+                      <label class="pt-form__label decorator decorator_space-r_m form__label">
+                        <span class="text text_size_p text_weight_700 text_view_primary">Имя:</span>
+                      </label>
+                      <div class="pt-form__control">
+                        <span class="input input_theme_mishka input_size_xl input_width_available i-bem" data-bem='{"input":{}}'>
+                          <span class="input__box">
+                            <input class="input__control" placeholder="Введите ваше имя*">
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_center form__item_display_block">
+                      <label class="pt-form__label decorator decorator_space-r_m form__label">
+                        <span class="text text_size_p text_weight_700 text_view_primary">Фамилия:</span>
+                      </label>
+                      <div class="pt-form__control">
+                        <span class="input input_theme_mishka input_size_xl input_width_available i-bem" data-bem='{"input":{}}'>
+                          <span class="input__box">
+                            <input class="input__control" placeholder="Укажите фамилию*">
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_center form__item_display_block">
+                      <label class="pt-form__label decorator decorator_space-r_m form__label">
+                        <span class="text text_size_p text_weight_700 text_view_primary">Отчество:</span>
+                      </label>
+                      <div class="pt-form__control">
+                        <span class="input input_theme_mishka input_size_xl input_width_available i-bem" data-bem='{"input":{}}'>
+                          <span class="input__box">
+                            <input class="input__control" placeholder="Отчество, если желаете">
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ТЕЛЕФОН и ПОЧТА -->
+        <div class="tpl-layout__section form_color-bg_ghost container">
+          <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center decorator decorator_space-v_xl">
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <label class="pt-form__label text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">Тел:</label>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <!-- ТЕЛЕФОН -->
+                <div class="pt-form__item form__item">
+                  <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_top form__item_display_block">
+                    <div class="pt-form__control">
+                      <span class="input input_theme_mishka input_size_xl input_width_available i-bem" data-bem='{"input":{}}'>
+                        <span class="input__box">
+                          <input class="input__control" placeholder="+7 ХХХ ХХ ХХ*">
+                          <span class="input__phone i-bem input__phone_js_inited input__phone_visible">
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ПОЧТА -->
+            </div>
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <label class="pt-form__label text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">E-mail</label>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <div class="pt-form__item form__item">
+                  <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_top form__item_display_block">
+                    <div class="pt-form__control">
+                      <span class="input input_theme_mishka input_size_xl input_width_available i-bem" data-bem='{"input":{}}'>
+                        <span class="input__box">
+                          <input class="input__control" placeholder="Ваш Email">
+                          <span class="input__mail i-bem input__mail_js_inited input__mail_visible">
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ДОПОЛНИТЕЛЬНОЕ -->
+        <div class="tpl-layout__section container">
+          <div class="tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center decorator decorator_space-v_xl">
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_4 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_1 tpl-grid__fraction_m-col_1">
+                <label class="pt-form__label text text_size_xl text_transform_uppercase text_weight_700 text_view_brand-mishka">Доп</label>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_3 tpl-grid__fraction_m-col_4">
+                <div class="pt-form__item form__item">
+                  <div class="pt-form__item pt-form__item_space-v_xs pt-form__item_distribute_default pt-form__item_vertical-align_top form__item_display_block">
+                    <div class="pt-form__control">
+                      <textarea class="textarea textarea_theme_mishka textarea_size_l textarea_width_available form__textarea textarea__control i-bem"
+                        data-bem='{"textarea":{}}' placeholder="Ваш текст должен быть здесь"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tpl-grid tpl-grid_xs-columns_1 tpl-grid_s-ratio_1-1-1-1 tpl-grid_m-columns_6 tpl-grid_vertical-align_center">
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_6 tpl-grid__fraction_m-col_1"></div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_2 tpl-grid__fraction_m-col_3 decorator_indent-t_m">
+                <button class="button button_theme_mishka button_size_17 button_xs-width_260 button_type_submit button__control i-bem"
+                  data-bem='{"button":{}}' type="submit">
+                  <span class="button__text text text_transform_uppercase text_weight_700">Oтправить заказ</span>
+                </button>
+              </div>
+              <div class="tpl-grid__fraction tpl-grid__fraction_xs-col_1 tpl-grid__fraction_s-col_2 tpl-grid__fraction_m-col_2 tpl-grid__fraction_xs-order_-1 tpl-grid__fraction_align_center">
+                <span class="text text_size_s text_view_secondary">*Поля обязательны для заполнения</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </form>
+
   </main>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="page-footer__logo">
-        <a href="index.html">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  <footer class="footer decorator_space-v_xxxl">
+    <div class="footer__container tpl-layout__container tpl-layout__container_size_m tpl-layout__container_align_center">
+      <div class="footer__logo decorator_space-a_l">
+        <a class="logo logo_view_primary logo_hover_green">
+          <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056"
             xml:space="preserve">
             <g>
@@ -269,32 +418,34 @@
           </svg>
         </a>
       </div>
-      <div class="social">
-        <a href="#" class="social__btn">
-          <svg class="social__btn-icon" width="22" height="21">
+      <div class="footer__socials decorator_space-a_l">
+        <a href="#" class="decorator decorator_indent-h_l">
+          <svg class="social-icon social-icon_size_m social-icon_name_instagram social-icon_view_primary social-icon_hover_green">
             <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-insta"></use>
           </svg>
-          <p class="social__btn--hidden">Инстаграмм</p>
+          <p hidden>Инстаграмм</p>
         </a>
-        <a href="#" class="social__btn">
-          <svg class="social__btn-icon" width="15" height="19">
+        <a href="#" class="decorator decorator_indent-h_l">
+          <svg class="social-icon social-icon_size_m social-icon_name_facebook social-icon_view_primary social-icon_hover_green">
             <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-fb"></use>
           </svg>
-          <p class="social__btn--hidden">Фейсбук</p>
+          <p hidden>Фейсбук</p>
         </a>
-        <a href="#" class="social__btn">
-          <svg class="social__btn-icon" width="24" height="20">
+        <a href="#" class="decorator decorator_indent-h_l">
+          <svg class="social-icon social-icon_size_m social-icon_name_twitter social-icon_view_primary social-icon_hover_green">
             <use xmlns="http://www.w3.org/2000/svg" xlink:href="#icon-twitter"></use>
           </svg>
-          <p class="social__btn--hidden">Твиттер</p>
+          <p hidden>Твиттер</p>
         </a>
       </div>
-      <div class="copyright">
-        <b>Разработано</b>
-        <a class="copyright__logo" href="https://htmlacademy.ru/">
-          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09"
-            xml:space="preserve">
+      <div class="footer__copyright pt-icon-plus pt-icon-plus_vertical-align_center decorator_space-a_l">
+        <div class="pt-icon-plus__block">
+          <span class="text text_size_xl text_view_prime text_weight_bold">Разработано</span>
+        </div>
+        <a class="pt-icon-plus__icon decorator_indent-l_xxl" href="https://htmlacademy.ru/">
+          <svg class="social-icon social-icon_size_m" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
+            enable-background="new 0 0 26.943 34.09" xml:space="preserve">
             <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" />
           </svg>
         </a>
@@ -303,6 +454,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  </div>
 </body>
 
 </html>

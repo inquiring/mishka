@@ -1,0 +1,91 @@
+
+.button_theme_popup {
+  font-family: "Open Sans", "Arial", sans-serif;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  color: var(--color-bg-default);
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background: var(--color-typo-brand);
+  text-align: center;
+  white-space: nowrap;
+  width: 260px;
+}
+// кнопка без границ
+.button_theme_popup.button_view_plain {
+  background: none;
+}
+
+.button_theme_popup.button_view_ghost {
+  background: var(--color-typo-ghost);
+}
+// прозрачный фон
+.button_theme_popup.button_view_pseudo {
+  overflow: hidden;
+  background: none;
+}
+
+.button_theme_popup::before {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  content: "";
+  border-radius: 0;
+  background: var(--color-typo-brand);
+}
+
+.button_theme_popup:hover {
+  color: #ffffff;
+  background: #ffffff;
+}
+
+.button_theme_popup:hover::before {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  content: "";
+  border-radius: 0;
+  background: #444444;
+}
+
+.button_theme_popup:active {
+  color: #7c7c7c;
+}
+
+.button_theme_popup.button_display_block {
+  display: block;
+}
+
+.button_theme_popup.button_size_17 {
+  font-size: 17px;
+  line-height: 52px;
+}
+
+.button_theme_popup.button_size_17 .button__text {
+  margin: 0 17px;
+}
+
+.button_theme_popup .button__text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.button_theme_popup.button_size_l {
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.button_theme_popup.button_size_l .button__text {
+  margin: 0 15px;
+}

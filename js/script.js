@@ -6,17 +6,29 @@
 // toString() для превращения списка в строку
 // length для получения количества классов в списке
 // value для добавления дополнительных свойств и методов для объекта  classList
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+var menuItem = document.querySelector('.menu__item');
+var menuItem1 = document.getElementById('uniq14953563348152');
+var menuItem2 = document.getElementById('uniq14953563348153');
+var menuItem3 = document.getElementById('uniq14953563348154');
+var menuItem4 = document.getElementById('uniq14953563348155');
+var navToggle = document.querySelector('.menu__btn-burger');
 
-navMain.classList.remove('main-nav--nojs');
+// navToggle.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+    if (navToggle.classList.contains('menu__btn-burger--active')) {
+        navToggle.classList.remove('menu__btn-burger--active');
+        menuItem1.setAttribute('hidden', true);
+        menuItem2.setAttribute('hidden', true);
+        menuItem3.setAttribute('hidden', true);
+        menuItem4.setAttribute('hidden', true);
+
+
     } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+        navToggle.classList.add('menu__btn-burger--active');
+        menuItem1.removeAttribute('hidden');
+        menuItem2.removeAttribute('hidden');
+        menuItem3.removeAttribute('hidden');
+        menuItem4.removeAttribute('hidden');
     }
 });

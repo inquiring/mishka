@@ -1,94 +1,80 @@
-// @import '../variables.less';
-// @import '../mixins.less';
+@media @mobile {
+  .menu {
+    &__btn-burger {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      display: none;
+      height: @h_header-mobile;
+      width: @h_header-mobile;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 1000;
+    }
 
-// .menu {
-//   height: 79px;
-//   background: var(--color-bg-default);
-//   border-bottom: 1px solid var(--color-bg-border);
-//   box-sizing: border-box;
-//   position: fixed;
-//   width: 100%;
-//   top: 0;
-//   z-index: 100;
-// }
-  
-// .menu__container {
-//   height: 100%;
-//   display: flex;
-//   /* flex-flow: row nowrap; */
-//   justify-content: space-between;
-//   /* align-items: center; */
-// }
-  
-// .menu__logo {
-//   display: block;
-//   width: 56px;
-//   height: 34px;
-//   background-size: 100%;
-//   background-repeat: no-repeat;
-//   /*  */
-//   order: 2;
-//   width: 150px;
-//   height: 80px;
-//   align-self: center;
-// }
-  
-  
-// .menu__nav {
-//   display: flex;
-//   flex-flow: row wrap;
-//   align-items: baseline;
-//     /*  */
-//   order: 1;
-//   width: 422px;
-// }
+    &__btn-burger--show {
+      display: block;
+    }
 
-// .menu__user {
-//   display: flex;
-//   flex-flow: row nowrap;
-//   align-items: baseline;
-//   /*  */
-//   order: 3;
-// }
+    &__btn-burger span,
+    &__btn-burger span::after,
+    &__btn-burger span::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 20px;
+      background-color: var(--color-bg-system);
+      transition: all 0.35s ease-in-out;
+    }
 
-// .menu__item {
-//   position: relative;
-//   margin-left: var(--space-xxxl);
-//   padding: 29px 0 30px;
+    &__btn-burger:hover span,
+    &__btn-burger:hover span::after,
+    &__btn-burger:hover span::before {
+      background-color: var(--color-bg-system);
+    }
 
-//   /*  */
-//   width: 190px;
-// }
+    &__btn-burger:active span,
+    &__btn-burger:active span::after,
+    &__btn-burger:active span::before {
+      background-color: var(--color-bg-normal);
+    }
 
-// /*  */
-// .menu__nav .menu__item:nth-child(1) {
-//   border-right: 1px solid #f1f1f1;
-// }
-// .menu__nav .menu__item:nth-child(1),
-// .menu__nav .menu__item:nth-child(3) {
-//   margin-left: 0;
-// }
+    &__btn-burger span {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
 
-// .menu__user .menu__item:nth-child(1) {
-//   /*  */
-//   margin-left: 0;
-//   width: 80px;
-//   border-left: 1px solid #f1f1f1;
-//   border-right: 1px solid #f1f1f1;
-// }
+    &__btn-burger span::after {
+      right: 0;
+      top: -10px;
+    }
 
-// .menu__user .menu__item:nth-child(1).text {
-//   font-size: 0;
-// }
+    &__btn-burger span::before {
+      right: 0;
+      top: 10px;
+    }
 
-// .menu__user .menu__item:nth-child(2) {
-//   /*  */
-//   text-align: right;
-// }
+    &__btn-burger--active:hover span,
+    &__btn-burger--active span {
+      background-color: transparent;
+      width: 30px;
+    }
 
-// .menu__item_view_link {
-//   display: block;
-//   text-decoration: none;
-//   -webkit-transition: color .15s;
-//   transition: color .15s;
-// }
+    &__btn-burger--active span::before,
+    &__btn-burger--active span::after {
+      top: 0;
+      right: -3px;
+      width: 30px;
+      transition: all 0.35s;
+    }
+
+    &__btn-burger--active span::before {
+      transform: rotate(45deg);
+    }
+
+    &__btn-burger--active span::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
