@@ -4,6 +4,7 @@
   "private": true,
   "description": "Личный проект",
   "devDependencies": {
+    "cli": ">=1.0.0",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "9.7.0",
     "grunt": "1.0.4",
