@@ -1,34 +1,36 @@
-// add() для добавления класса в список
-// remove() для удаления класса из списка
-// contains() для проверки наличия класса в списке
-// toggle() для переключения класса — добавления при отсутствии в списке и удаления при наличии (с некоторыми особенностями)
-// item() для получения класса по его индексу в списке
-// toString() для превращения списка в строку
-// length для получения количества классов в списке
-// value для добавления дополнительных свойств и методов для объекта  classList
-var menuItem = document.querySelector('.menu__item');
-var menuItem1 = document.getElementById('uniq14953563348152');
-var menuItem2 = document.getElementById('uniq14953563348153');
-var menuItem3 = document.getElementById('uniq14953563348154');
-var menuItem4 = document.getElementById('uniq14953563348155');
 var navToggle = document.querySelector('.menu__btn-burger');
+var menuItems = document.querySelectorAll('.menu__item[id]');
 
-// navToggle.classList.remove('main-nav--nojs');
+if (navToggle && menuItems.length) {
+    var isMobile = window.matchMedia('(max-width: 699px)');
 
-navToggle.addEventListener('click', function() {
-    if (navToggle.classList.contains('menu__btn-burger--active')) {
-        navToggle.classList.remove('menu__btn-burger--active');
-        menuItem1.setAttribute('hidden', true);
-        menuItem2.setAttribute('hidden', true);
-        menuItem3.setAttribute('hidden', true);
-        menuItem4.setAttribute('hidden', true);
+    function syncMenuState() {
+        var shouldHideItems = isMobile.matches && !navToggle.classList.contains('menu__btn-burger--active');
 
+        for (var i = 0; i < menuItems.length; i++) {
+            if (i === 0) {
+                menuItems[i].removeAttribute('hidden');
+                continue;
+            }
 
-    } else {
-        navToggle.classList.add('menu__btn-burger--active');
-        menuItem1.removeAttribute('hidden');
-        menuItem2.removeAttribute('hidden');
-        menuItem3.removeAttribute('hidden');
-        menuItem4.removeAttribute('hidden');
+            if (shouldHideItems) {
+                menuItems[i].setAttribute('hidden', true);
+            } else {
+                menuItems[i].removeAttribute('hidden');
+            }
+        }
     }
-});
+
+    syncMenuState();
+
+    if (typeof isMobile.addEventListener === 'function') {
+        isMobile.addEventListener('change', syncMenuState);
+    } else if (typeof isMobile.addListener === 'function') {
+        isMobile.addListener(syncMenuState);
+    }
+
+    navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('menu__btn-burger--active');
+        syncMenuState();
+    });
+}
