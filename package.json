@@ -4,32 +4,24 @@
   "private": true,
   "description": "Личный проект",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "9.7.0",
-    "cli": ">=1.0.0",
-    "grunt": "1.0.4",
-    "grunt-browser-sync": "2.2.0",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^3.1.0",
-    "grunt-contrib-less": "^2.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-csso": "^2.2.4",
-    "grunt-postcss": "0.9.0",
-    "grunt-svgmin": "^6.0.0",
-    "grunt-svgstore": "^2.0.0",
-    "load-grunt-tasks": "^5.1.0",
+    "autoprefixer": "^10.4.27",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "csso": "^5.0.5",
+    "editorconfig-checker": "^6.1.1",
+    "less": "^4.6.4",
     "playwright": "^1.58.2",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "postcss-nested": "^7.0.2",
-    "postcss-simple-vars": "^7.0.1",
-    "stylelint": "^11.1.1",
-    "stylelint-config-htmlacademy": "^0.1.4",
-    "stylelint-order": "^3.1.1"
+    "postcss-simple-vars": "^7.0.1"
   },
   "scripts": {
-    "test": "editorconfig-cli",
-    "build": "grunt build",
-    "start": "npm run build && grunt serve"
+    "test": "editorconfig-checker -exclude '^(build/|node_modules/|\\.git/|\\.editorconfig$)'",
+    "build": "node scripts/build.cjs",
+    "serve": "node scripts/serve.cjs",
+    "watch": "chokidar \"*.html\" \"css/**\" \"fonts/**/*.{woff,woff2}\" \"img/**\" \"js/**\" \"less/**/*.less\" -c \"npm run build\"",
+    "start": "npm run build && concurrently \"npm run serve\" \"npm run watch\""
   },
   "editorconfig-cli": [
     "*.html",
@@ -42,7 +34,7 @@
   "engines": {
     "node": ">=6.10"
   },
-  "main": "Gruntfile.js",
+  "main": "scripts/build.cjs",
   "keywords": [
     "mishka"
   ],
